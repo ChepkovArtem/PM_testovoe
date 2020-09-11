@@ -1,0 +1,15 @@
+.breadcrumbs{
+    display: flex;
+    align-items: center;
+    :not(:first-child){
+        margin-left: 13px;
+    }
+    &__sphere{
+        color: $textSecondary;
+    }
+    &__icon{
+        transform: rotate(-90deg);
+        height: 4.56px;
+        width: 7.71px;
+    }
+}

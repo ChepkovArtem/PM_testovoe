@@ -1,0 +1,51 @@
+.options-mobile--container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: white;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    text-align:center;
+    .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+      }
+      .options-mobile__title{
+        border-bottom: 1px solid $lightestGray;
+        text-align: start;
+        padding: 15px 30px;
+      }
+    .options-mobile--countries, .options-mobile--spheres{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 30px;
+        border-bottom: 1px solid $lightestGray;
+    }
+    .arrow-down{
+        width: 9.41px;
+        height: 6.12px;
+        transform: rotate(-90deg);
+    }
+    .mobile__button{
+        width: 80%;
+        margin-left: 10%;
+        display: flex;
+        justify-content: center;
+        &--save{
+            margin-top: auto;
+        }
+        &--cancel{
+            margin: 15px 0 30px;
+        }
+    }
+}

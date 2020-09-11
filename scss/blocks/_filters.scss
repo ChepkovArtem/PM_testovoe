@@ -1,0 +1,98 @@
+.filters{
+    p,a{
+        color: $textSecondary;
+    }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    .contries_checkboxes__list{
+        background-color:$goldLight;
+        padding: 20px;
+        position: absolute;
+        left: 0;
+        top: 50px;
+        z-index: 100;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 525px;
+        width: 1000px;
+        display: none;
+        @include hdscreen{
+            width: 600px;
+        }
+        &.show{
+            display: flex;
+        }
+    }
+    .spheres_checkboxes__list{
+        background-color:$goldLight;
+        padding: 20px;
+        position: absolute;
+        left: 0;
+        top: 50px;
+        z-index: 100;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: auto;
+        width: 290px;
+        display: none;
+        &.show{
+            display: flex;
+        }
+    }
+    &__checkboxes{
+        display: flex;
+        align-items: center;
+    }
+    .news-filter{
+        .countries--button{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        }
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+        width: 226px;
+        height: 50px;
+        background-color: $lightestGray;
+        transition: 0.5s;
+
+        .arrow-down{
+            width: 9.41px;
+            height: 6.12px;
+            transition: 1s;
+        }
+        &.active{
+            background-color: $goldLight;
+            .arrow-down{
+                transform: rotate(180deg);
+            }
+        }
+    }
+    .filters__spheries{
+        margin-left: 15px;
+    }
+    &__text{
+        display: flex;
+        flex-direction: column;
+    }
+    &__sorting{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        :not(:first-child){
+            margin-left: 15px;
+        }
+    }
+    .filters__checkboxes, .filters__sorting{
+        @include tablets{
+            display: none;
+        }
+    }
+}

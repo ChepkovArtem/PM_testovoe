@@ -1,0 +1,33 @@
+$darkGray: #333;
+$lightestGray: #EEE;
+$gold: #E2B755;
+$goldLight: #FCF8ED;
+$brown: #A96C17;
+
+$textPrimary: #000;
+$textSecondary: #999;
+
+$line: #DDD;
+
+$mainBack: #E5E5E5;
+
+
+@import "main/normalize";
+@import "main/media";
+@import "main/layout";
+
+
+
+@import "blocks/header";
+@import "blocks/footer";
+@import "blocks/news";
+@import "blocks/breadcrumb";
+@import "blocks/title";
+@import "blocks/filters";
+@import "blocks/hamburger";
+@import "blocks/button";
+@import "blocks/mobile-button";
+@import "blocks/mobile-filters";
+
+
+

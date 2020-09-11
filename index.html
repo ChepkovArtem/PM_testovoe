@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.12/vue.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Progressive Media testovoe zadanie</title>
+</head>
+
+<body>
+<!-- ШАПКА -->
+    <header class="header">
+        <!-- ВЕРХНЕЕ МЕНЮ -->
+        <div class="top_menu">
+            <div class="wrapper">
+                <div class="top_menu__section">
+                    <!-- СПИСОК СТРАН -->
+                    <div class="top_menu__countries">
+                        <ul class="top_menu__list">
+                            <li class="top_menu__item active">
+                                <h3 class="top_menu__country">All africa</h3>
+                            </li>
+                            <li class="top_menu__item">
+                                <h3 class="top_menu__country">Nigeria</h3>
+                            </li>
+                            <li class="top_menu__item">
+                                <h3 class="top_menu__country">South Africa</h3>
+                            </li>
+                            <li class="top_menu__item">
+                                <h3 class="top_menu__country">Egypt</h3>
+                            </li>
+                            <li class="top_menu__item">
+                                <h3 class="top_menu__country">Angola</h3>
+                            </li>
+                            <li class="top_menu__item">
+                                <h3 class="top_menu__country">Kenya</h3>
+                            </li>
+                            <li class="top_menu__item">
+                                <h3 class="top_menu__country">Ethiopia</h3>
+                            </li>
+                            <li class="top_menu__item"></li>
+                        </ul>
+                    </div>
+                    <!-- ПЕРЕКЛЮЧАТЕЛИ -->
+                    <div class="top_menu__switches switches">
+                        <div class="switches__moon">
+                            <svg class="switches__icon moon">
+                                <use xlink:href="./images/sprite.svg#moon"></use>
+                            </svg>
+                        </div>
+                        <div class="switches__languages">
+                            <h3 class="switches__language">EN</h3>
+                            <svg class="switches__icon arrow-down">
+                                <use xlink:href="./images/sprite.svg#arrow-down"></use>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ОСНОВНОЕ МЕНЮ -->
+        <div class="primary">
+            <div class="wrapper">
+                <div class="primary__section">
+                    <div class="primary__avatar">
+                        <!-- ГАМБУРГЕР -->
+                        <div class="primary__hamburger hamburger">
+                            <div class="hamburger__button">
+                                <div class="hamburger__line"></div>
+                            </div>
+                            <div class="hamburger__content">
+                                <nav class="hamburger__navigation">
+                                    <ul class="hamburger__list">
+                                        <li class="hamburger__item">
+                                            <a href="#" class="hamburger__link">Home</a>
+                                        </li>
+                                        <li class="hamburger__item">
+                                            <a href="#" class="hamburger__link">About us</a>
+                                        </li>
+                                        <li class="hamburger__item">
+                                            <a href="#" class="hamburger__link">Archives</a>
+                                        </li>
+                                        <li class="hamburger__item">
+                                            <a href="#" class="hamburger__link">Sitemap</a>
+                                        </li>
+                                        <li class="hamburger__item">
+                                            <a href="#" class="hamburger__link">Subscribe plans</a>
+                                        </li>
+                                        <li class="hamburger__item">
+                                            <a href="#" class="hamburger__link">FAQ</a>
+                                        </li>
+                                        <li class="hamburger__item">
+                                            <a href="#" class="hamburger__link">Terms and Conditions</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <!-- ЛОГОТИП -->
+                        <div class="primary__logo">
+                            <svg class="primary__icon logo">
+                                <use xlink:href="./images/sprite.svg#logo"></use>
+                            </svg>
+                        </div>
+                        <div class="primary__title">
+                            <h2 class="primary__name">ashantene</h2>
+                            <div class="primary__slogan">
+                                <p>data</p>
+                                <p>information</p>
+                                <p>intelligence</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ПОИСК -->
+                    <div class="primary__search">
+                        <input type="text" class="searchTerm" placeholder="Search">
+                        <button type="submit" class="searchButton">
+                            <svg class="primary__icon search">
+                                <use xlink:href="./images/sprite.svg#search"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <!-- ОПОВЕЩЕНИЯ -->
+                    <div class="primary__feeds feeds">
+                        <div class="feeds__item bookmark_section">
+                            <div class="bookmark__avatar">
+                                <svg class="feeds__icon bookmark">
+                                    <use xlink:href="./images/sprite.svg#bookmark"></use>
+                                </svg>
+                            </div>
+                            <div class="feeds__text">
+                                <h3 class="feeds__title">Bookmarks</h3>
+                                <p class="feeds__value">16 news</p>
+                            </div>
+                        </div>
+                        <div class="feeds__item feed_section">
+                            <div class="feeds__avatar">
+                                <svg class="feeds__icon feed">
+                                    <use xlink:href="./images/sprite.svg#feed"></use>
+                                </svg>
+                            </div>
+                            <div class="feeds__text">
+                                <h3 class="feeds__title">My feed</h3>
+                                <p class="feeds__value">2 notifications</p>
+                            </div>
+                        </div>
+                        <div class="feeds__item user_section">
+                            <div class="user__avatar">
+                                <svg class="feeds__icon user">
+                                    <use xlink:href="./images/sprite.svg#user"></use>
+                                </svg>
+                            </div>
+                            <div class="feeds__text">
+                                <h3 class="feeds__title">Konstantin K.</h3>
+                                <p class="feeds__value">Subscription: 305 days left</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- МЕНЮ КАТЕГОРИЙ -->
+        <div class="main_menu">
+            <div class="wrapper">
+                <div class="main_menu__section">
+                    <nav class="navigation">
+                        <!-- СПИСОК КАТЕГОРИЙ -->
+                        <ul class="navigation__list">
+                            <li class="navigation__item">
+                                <h3 class="navigation__sphere">Government</h3>
+                            </li>
+                            <li class="navigation__item">
+                                <h3 class="navigation__sphere">Companies</h3>
+                            </li>
+                            <li class="navigation__item">
+                                <h3 class="navigation__sphere">People</h3>
+                            </li>
+                            <li class="navigation__item">
+                                <h3 class="navigation__sphere">Politics</h3>
+                            </li>
+                            <li class="navigation__item">
+                                <h3 class="navigation__sphere">Finance</h3>
+                            </li>
+                            <li class="navigation__item">
+                                <h3 class="navigation__sphere">Mining</h3>
+                            </li>
+                            <li class="navigation__item">
+                                <h3 class="navigation__sphere">Confidential</h3>
+                            </li>
+                            <li class="navigation__item">
+                                <h3 class="navigation__sphere">Travel advisory</h3>
+                            </li>
+                            <li class="navigation__item">
+                                <h3 class="navigation__sphere">Investment Guide</h3>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+<!-- ОСНОВНОЙ КОНТЕНТ -->
+    <div class="content">
+        <div class="wrapper">
+            <div class="content__section">
+                <!-- ХЛЕБНЫЕ КРОШКИ -->
+                <div class="content__breadcrumbs breadcrumbs">
+                    <p class="breadcrumbs__country">All Africa</p>
+                    <svg class="breadcrumbs__icon arrow-right">
+                        <use xlink:href="./images/sprite.svg#arrow-down"></use>
+                    </svg>
+                    <p class="breadcrumbs__sphere">Companies</p>
+                </div>
+                <!-- НАЗВАНИЕ СТРАНИЦЫ -->
+                <div class="content__title title">
+                    <h1 class="title__name">Companies</h1>
+                    <!-- ДОБАВИТЬ В ЗАКЛАДКИ -->
+                    <div class="title__button">
+                        <svg class="title__icon add">
+                            <use xlink:href="./images/sprite.svg#add"></use>
+                        </svg>
+                        <p class="title__text">Add to my feed</p>
+                    </div>
+                </div>
+
+                <!-- ФИЛЬТРЫ -->
+                <div class="content__filters filters">
+                    <!-- ЧЕКБОКСЫ -->
+                    <div class="filters__checkboxes">
+                        <!-- СТРАНЫ -->
+                        <div id="country__checkbox" class="filters__countries news-filter" :class="{active : changed}">
+                            <div @click="showList(), changeClass()" class="countries--button">
+                                <div class="filters__text">
+                                    <h3 class="filters__title-countries">Country</h3>
+                                    <p class="filters__choosen-countries">All countries</p>
+                                </div>
+                                <svg class="filters__icon arrow-down">
+                                    <use xlink:href="./images/sprite.svg#arrow-down"></use>
+                                </svg>
+                            </div>
+                            <div class="countries__checkboxes">
+                                <ul class="contries_checkboxes__list" :class="{show : changed}">
+                                    <li v-for="item in countries" class="countries_checkboxes__item">
+                                        <input type="checkbox" v-bind:id="item" v-bind:name="item">
+                                        <label v-bind:for="item">{{item}}</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- СФЕРЫ -->
+                        <div id="sphere__checkbox" class="filters__spheries news-filter" :class="{active : changed}">
+                            <div @click="showList(), changeClass()" class="countries--button">
+                                <div class="filters__text">
+                                    <h3 class="filters__title-spheries">Sphere</h3>
+                                    <p class="filters__choosen-spheries">All spheres</p>
+                                </div>
+                                <svg class="filters__icon arrow-down">
+                                    <use xlink:href="./images/sprite.svg#arrow-down"></use>
+                                </svg>
+                            </div>
+                            <div class="spheres__checkboxes">
+                                <ul class="spheres_checkboxes__list" :class="{show : changed}">
+                                    <li v-for="item in spheres" class="spheres_checkboxes__item">
+                                        <input type="checkbox" v-bind:id="item" v-bind:name="item">
+                                        <label v-bind:for="item">{{item}}</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- СОРТИРОВКА -->
+                    <div class="filters__sorting">
+                        <h3 class="filters__sorting-name">Sorting by:</h3>
+                        <a href="" class="filters__sorting-date">the latest</a>
+                        <a href="" class="filters__sorting-interest">the most interesting</a>
+                    </div>
+
+                    <!-- ФИЛЬТРЫ НА МОБИЛКАХ -->
+                    <div class="filters__mobile">
+                        <div class="filters__mobile--options options-mobile">
+                            <button class="options-mobile__button mobile__button" onclick="openNav()">
+                                <svg class="mobile__button--icon">
+                                    <use xlink:href="./images/sprite.svg#filters"></use>
+                                </svg>
+                                <h3 class="mobile__button--title">Filters</h3>
+                            </button>
+                            <div id="mobile-options" class="options-mobile--container">
+                                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                                <h2 class="options-mobile__title">Filters</h2>
+
+                                <div class="options-mobile--countries">
+                                    <div class="options-mobile__text">
+                                        <h3 class="options-mobile__title-countries">Country</h3>
+                                        <p class="options-mobile__choosen-countries">All countries</p>
+                                    </div>
+                                    <svg class="options-mobile__icon arrow-down">
+                                        <use xlink:href="./images/sprite.svg#arrow-down"></use>
+                                    </svg>
+                                </div>
+
+                                <div class="options-mobile--spheres">
+                                    <div class="options-mobile__text">
+                                        <h3 class="options-mobile__title-spheries">Sphere</h3>
+                                        <p class="options-mobile__choosen-spheries">All spheres</p>
+                                    </div>
+                                    <svg class="options-mobile__icon arrow-down">
+                                        <use xlink:href="./images/sprite.svg#arrow-down"></use>
+                                    </svg>
+                                </div>
+                                <div class="mobile__button--save">
+                                    <button class="mobile__button">Save</button>
+                                </div>
+                                <div class="mobile__button--cancel ">
+                                    <button class="mobile__button">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="filters__mobile--sorting sorting-mobile">
+                            <button class="sorting-mobile__button mobile__button">
+                                <svg class="mobile__button--icon">
+                                    <use xlink:href="./images/sprite.svg#sorting"></use>
+                                </svg>
+                                <h3 class="mobile__button--title">Sorting</h3>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- НОВОСТИ -->
+                <ul id="news_block" class="content__news news">
+                    <li v-for="item in items" v-bind:class="[item.country, item.sphere, item.priority]"
+                        class="news__item">
+                        <svg class="news__icon news_mark">
+                            <use xlink:href="./images/sprite.svg#news_mark"></use>
+                        </svg>
+                        <p class="news__country">{{item.country}}</p>
+                        <div class="news__sorting">
+                            <p class="news__sphere">{{item.sphere}}</p>
+                            <p class="news__priority">{{item.priority}}</p>
+                        </div>
+                        <h2 class="news__title">{{item.title}}</h2>
+                        <h3 class="news__text">{{item.text}}</h3>
+                        <p class="news__date">{{item.date}}</p>
+                    </li>
+                </ul>
+                <!-- КНОПКА ЗАГРУЗИТЬ НОВОСТИ -->
+                <div class="news__button">
+                    <button class="news__load">Load more news</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+<!-- ПОДВАЛ -->
+    <footer class="footer">
+        <!-- КОНТАКТЫ -->
+        <div class="footer__contact contact">
+            <div class="wrapper">
+                <div class="contact__section">
+                    <!-- КОНТАКТЫНЕ ДАННЫЕ -->
+                    <div class="contact__info">
+                        <h2 class="contact__title">Contact us</h2>
+                        <h3 class="contact__address">Communication Digitale et Media en Ligne 17BP 806 Abidjan 18 Côte
+                            d’Ivoire</h3>
+                        <a href="mailto:main@ashantene.com" class="contact__mail">main@ashantene.com</a>
+                    </div>
+                    <!-- НАВИГАЦИЯ СТРАНИЦ -->
+                    <div class="contact__menu">
+                        <ul class="contact__list">
+                            <li class="contact__item">
+                                <h3 class="contact__page">About us</h3>
+                            </li>
+                            <li class="contact__item">
+                                <h3 class="contact__page">Archives</h3>
+                            </li>
+                            <li class="contact__item">
+                                <h3 class="contact__page">Sitemap</h3>
+                            </li>
+                            <li class="contact__item">
+                                <h3 class="contact__page">Subscribe plans</h3>
+                            </li>
+                            <li class="contact__item">
+                                <h3 class="contact__page">FAQ</h3>
+                            </li>
+                            <li class="contact__item">
+                                <h3 class="contact__page">Terms and Conditions</h3>
+                            </li>
+                            <li class="contact__item">
+                                <svg class="contact__icon linkedin">
+                                    <use xlink:href="./images/sprite.svg#linkedin"></use>
+                                </svg>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- КОПИРАЙТИНГ -->
+        <div class="footer__copyright copyright">
+            <div class="wrapper">
+                <div class="copyright__section">
+                    <!-- КТО -->
+                    <p class="copyright__copy">© Communication Digitale et Media en Ligne</p>
+                    <!-- КЕМ -->
+                    <div class="copyright__made">
+                        <p>Made in</p>
+                        <a href="" class="copyright__author">Progressive Media</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/news.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/country_checkbox.js"></script>
+    <script src="./js/spheres_checkbox.js"></script>
+
+</body>
+
+</html>
